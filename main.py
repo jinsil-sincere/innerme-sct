@@ -5,6 +5,8 @@
 
 
 import streamlit as st
+from langchain_openai import ChatOpenAI
+
 
 st.set_page_config(page_title='심리 분석 서비스', layout='wide')
 
@@ -99,4 +101,5 @@ if submit_clicked:
                 st.write(result)
             except Exception as e:
                 st.error(f"분석 중 오류가 발생했습니다: {str(e)}")
+
                 st.info("API 키가 올바른지 확인해주세요.")
