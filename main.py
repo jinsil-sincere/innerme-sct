@@ -27,7 +27,8 @@ openai_api_key = st.text_input(
     "OpenAI API Key", 
     type="password", 
     help="sk-로 시작하는 OpenAI API 키를 입력해주세요. 키는 저장되지 않습니다.",
-    placeholder="sk-..."
+    placeholder="sk-...",
+    label_visibility="collapsed"
 )
 
 st.markdown("---")
@@ -103,3 +104,4 @@ if submit_clicked:
                 st.error(f"분석 중 오류가 발생했습니다: {str(e)}")
 
                 st.info("API 키가 올바른지 확인해주세요.")
+
